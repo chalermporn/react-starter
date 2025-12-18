@@ -17,8 +17,7 @@ A modern React starter template with TypeScript, Vite, Tailwind CSS, and compreh
 
 ## 📋 Prerequisites
 
-- Node.js (v18 or higher recommended)
-- npm, yarn, or pnpm
+- [Bun](https://bun.sh) (v1.0 or higher recommended)
 
 ## 🛠️ Getting Started
 
@@ -26,17 +25,17 @@ A modern React starter template with TypeScript, Vite, Tailwind CSS, and compreh
 
 ```bash
 # Install dependencies
-npm install
+bun install
 
 # Set up git hooks
-npm run prepare
+bun run prepare
 ```
 
 ### Development
 
 ```bash
 # Start dev server
-npm run dev
+bun run dev
 ```
 
 The app will be available at `http://localhost:5173`
@@ -45,10 +44,10 @@ The app will be available at `http://localhost:5173`
 
 ```bash
 # Type check and build for production
-npm run build
+bun run build
 
 # Preview production build
-npm run preview
+bun run preview
 ```
 
 ## 🧪 Testing
@@ -57,23 +56,23 @@ This project uses Vitest for testing with React Testing Library.
 
 ```bash
 # Run tests
-npm test
+bun test
 
 # Run tests with UI
-npm run test:ui
+bun run test:ui
 
 # Generate coverage report
-npm run test:coverage
+bun run test:coverage
 ```
 
 ## 🧹 Linting
 
 ```bash
 # Run linter
-npm run lint
+bun run lint
 
 # Fix linting issues
-npm run lint:fix
+bun run lint:fix
 ```
 
 ## 📦 Release Management
@@ -82,19 +81,19 @@ This project uses [standard-version](https://github.com/conventional-changelog/s
 
 ```bash
 # Create first release
-npm run release:first-release
+bun run release:first-release
 
 # Create a patch release (0.0.x)
-npm run release:patch
+bun run release:patch
 
 # Create a minor release (0.x.0)
-npm run release:minor
+bun run release:minor
 
 # Create a major release (x.0.0)
-npm run release:major
+bun run release:major
 
 # Auto-determine version bump
-npm run release
+bun run release
 ```
 
 ## 🏗️ Project Structure
