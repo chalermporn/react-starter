@@ -1,73 +1,170 @@
-# React + TypeScript + Vite
+# React Starter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React starter template with TypeScript, Vite, Tailwind CSS, and comprehensive tooling for building production-ready applications.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚛️ **React 19** - Latest React with new features
+- 🎯 **TypeScript** - Type-safe development
+- ⚡ **Vite** - Lightning fast HMR and build tool
+- 🎨 **Tailwind CSS v4** - Utility-first CSS with Vite plugin
+- 🧪 **Vitest** - Fast unit testing with coverage support
+- 🧹 **OXLint** - Fast and modern linter
+- 🎣 **Husky** - Git hooks for quality checks
+- 📦 **Radix UI** - Unstyled, accessible UI components
+- 🎭 **shadcn/ui** - Pre-configured with button component
+- 📝 **Standard Version** - Automated versioning and CHANGELOG
 
-## React Compiler
+## 📋 Prerequisites
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js (v18 or higher recommended)
+- npm, yarn, or pnpm
 
-## Expanding the ESLint configuration
+## 🛠️ Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+# Install dependencies
+npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Set up git hooks
+npm run prepare
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Start dev server
+npm run dev
 ```
+
+The app will be available at `http://localhost:5173`
+
+### Building
+
+```bash
+# Type check and build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 🧪 Testing
+
+This project uses Vitest for testing with React Testing Library.
+
+```bash
+# Run tests
+npm test
+
+# Run tests with UI
+npm run test:ui
+
+# Generate coverage report
+npm run test:coverage
+```
+
+## 🧹 Linting
+
+```bash
+# Run linter
+npm run lint
+
+# Fix linting issues
+npm run lint:fix
+```
+
+## 📦 Release Management
+
+This project uses [standard-version](https://github.com/conventional-changelog/standard-version) for automated versioning and CHANGELOG generation.
+
+```bash
+# Create first release
+npm run release:first-release
+
+# Create a patch release (0.0.x)
+npm run release:patch
+
+# Create a minor release (0.x.0)
+npm run release:minor
+
+# Create a major release (x.0.0)
+npm run release:major
+
+# Auto-determine version bump
+npm run release
+```
+
+## 🏗️ Project Structure
+
+```
+react-starter/
+├── src/
+│   ├── components/
+│   │   └── ui/              # shadcn/ui components
+│   ├── lib/
+│   │   └── utils.ts         # Utility functions
+│   ├── test/
+│   │   └── setup.ts         # Test configuration
+│   ├── App.tsx              # Main app component
+│   └── main.tsx             # App entry point
+├── public/                  # Static assets
+└── coverage/                # Test coverage reports
+```
+
+## 🎨 UI Components
+
+This template includes a pre-configured [shadcn/ui](https://ui.shadcn.com/) setup with:
+
+- Button component with variants
+- Tailwind CSS v4 with Vite plugin
+- CVA (class-variance-authority) for component variants
+- Radix UI primitives
+
+Add more components using the shadcn CLI or manually.
+
+## 📝 Tech Stack
+
+### Core
+- **React 19.2** - UI library
+- **TypeScript 5.9** - Type safety
+- **Vite 5** - Build tool
+
+### Styling
+- **Tailwind CSS 4.1** - Utility-first CSS
+- **class-variance-authority** - Component variants
+- **clsx & tailwind-merge** - Class name utilities
+- **lucide-react** - Icon library
+
+### Testing
+- **Vitest** - Test runner
+- **React Testing Library** - Component testing
+- **Happy DOM** - Fast DOM implementation
+- **@vitest/coverage-v8** - Coverage reporting
+
+### Tooling
+- **OXLint** - Fast linter
+- **Husky** - Git hooks
+- **Standard Version** - Release management
+
+## 🔧 Configuration Files
+
+- `vite.config.ts` - Vite configuration
+- `tsconfig.json` - TypeScript configuration
+- `tsconfig.app.json` - App-specific TS config
+- `tsconfig.node.json` - Node-specific TS config
+- `components.json` - shadcn/ui configuration
+
+## 📄 License
+
+Private project
+
+## 🤝 Contributing
+
+1. Create a feature branch
+2. Make your changes
+3. Write tests
+4. Ensure linting passes
+5. Submit a pull request
